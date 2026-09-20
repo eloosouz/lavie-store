@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!--
+=====================================================================
+  LA VIE STORE — landing page
+  ---------------------------------------------------------------
+  ONDE MEXER (procure por estas marcas no arquivo, na ordem):
+
+  [1] SEO        — título, descrição e endereço do Google. Está logo abaixo.
+  [2] PALETA     — as cores da loja. Um bloco só, dentro do <style>.
+  [3] FOTOS      — como colocar as fotos do Instagram.
+  [4] PRODUTOS   — nome, preço e foto de cada peça.
+  [5] WHATSAPP   — seu número. Está no <script>, no final do arquivo.
+  [6] HORÁRIO    — horário e bairros de entrega.
+
+  Tudo que estiver escrito ALTERE AQUI é campo pra você preencher.
+=====================================================================
+-->
+
+  <!-- ============ [1] SEO ============
+     Título: até 60 caracteres, comece pelo que a pessoa digita no Google.
+     Descrição: até 155 caracteres.
+     Troque "lavie.com.br" pelo seu domínio nos 2 lugares abaixo.       -->
+  <title>La Vie Store — Joias em prata 925 em Campo Grande MS</title>
+  <meta name="description"
+    content="Anéis, colares, brincos e pulseiras em prata 925 legítima. Entrega no mesmo dia em Campo Grande MS e atendimento direto pelo WhatsApp.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#2A2522">
+  <link rel="canonical" href="https://lavie.com.br/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="La Vie Store">
+  <meta property="og:title" content="La Vie Store — Joias em prata 925 em Campo Grande MS">
+  <meta property="og:description"
+    content="Prata 925 legítima com entrega no mesmo dia em Campo Grande. Escolha pelo WhatsApp.">
+  <meta property="og:url" content="https://lavie.com.br/">
+  <!-- ALTERE AQUI: imagem de 1200x630px que aparece quando o link é
+     compartilhado no WhatsApp. Sem ela, o link vai sem miniatura.     -->
+  <meta property="og:image" content="https://lavie.com.br/fotos/lavie1.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Karla:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Ficha do Google. ALTERE AQUI: telefone, endereço e horários.
+     É isso que faz a loja aparecer no mapa em "prata Campo Grande".   -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": "La Vie Store",
+  "description": "Joias em prata 925 legítima em Campo Grande, Mato Grosso do Sul.",
+  "url": "https://lavie.com.br/",
+  "telephone": "5567992703754",
+  "priceRange": "R$80 - R$400",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Pix, Cartão de crédito, Dinheiro",
+  "sameAs": ["https://www.instagram.com/lavie.storeofc/"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Exemplo, 000 — Centro",
+    "addressLocality": "Campo Grande",
+    "addressRegion": "MS",
+    "postalCode": "79000-000",
+    "addressCountry": "BR"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":-20.4697,"longitude":-54.6201},
+  "areaServed": {"@type":"City","name":"Campo Grande"},
+  "openingHoursSpecification": [{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens":"09:00","closes":"18:00"
+  }]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Vocês entregam em qual região?","acceptedAnswer":{"@type":"Answer","text":"Entregamos em toda Campo Grande MS. Pedidos até as 15h chegam no mesmo dia. Entrega grátis acima de R$150."}},
+    {"@type":"Question","name":"A prata 925 escurece?","acceptedAnswer":{"@type":"Answer","text":"Sim, toda prata legítima escurece com o tempo. É sinal de que é prata de verdade. Limpa em um minuto com a flanela que vai junto no pedido."}},
+    {"@type":"Question","name":"Posso ver a peça antes de pagar?","acceptedAnswer":{"@type":"Answer","text":"Pode. Levamos a peça até você e o pagamento é feito na entrega, por Pix ou cartão."}},
+    {"@type":"Question","name":"Se o anel não servir, troca?","acceptedAnswer":{"@type":"Answer","text":"Troca sem custo em até 7 dias. Como a entrega é na cidade, a gente busca e leva o tamanho certo."}}
+  ]
+}
+</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    ...
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+
+  <!-- [6] ALTERE AQUI: a promessa de entrega. Só prometa o que cumpre. -->
+  <p class="aviso">Entrega no mesmo dia em <b>Campo Grande</b> · Grátis acima de R$150 · Pague na entrega</p>
+
+  <header class="topo" id="topo">
+    <div class="env topo__linha">
+      <a class="marca" href="#topo">La<em>&nbsp;Vie</em></a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#pecas">Peças</a>
+        <a href="#como">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="https://www.instagram.com/lavie.storeofc/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <a class="btn btn--zap" href="#" data-zap="Oi! Vim pelo site e quero ver as peças.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.44 1.32-1.99 1.36-.53.04-1.02.23-3.44-.72-2.9-1.14-4.73-4.1-4.87-4.29-.14-.19-1.16-1.54-1.16-2.94s.74-2.09 1-2.38c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.12.57.16.29.73 1.2 1.56 1.95 1.07.95 1.98 1.25 2.26 1.39.28.14.45.12.61-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.18 1.38Z" />
+        </svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero env">
+      <div class="hero__grade">
+        <div>
+          <p class="local">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+            </svg>
+            Campo Grande, MS
+          </p>
+          <!-- ALTERE AQUI: o título. Diga o que vende e onde, nesta ordem. -->
+          <h1>Prata 925 de verdade, entregue hoje na sua casa.</h1>
+          <p class="lead">Anéis, colares, brincos e pulseiras em prata legítima. Você escolhe pelo WhatsApp, a gente
+            leva até você em Campo Grande e você só paga quando a peça estiver na sua mão.</p>
+          <div class="hero__acoes">
+            <a class="btn btn--zap" href="#" data-zap="Oi! Quero ver as peças de prata disponíveis.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.44 1.32-1.99 1.36-.53.04-1.02.23-3.44-.72-2.9-1.14-4.73-4.1-4.87-4.29-.14-.19-1.16-1.54-1.16-2.94s.74-2.09 1-2.38c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.12.57.16.29.73 1.2 1.56 1.95 1.07.95 1.98 1.25 2.26 1.39.28.14.45.12.61-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.18 1.38Z" />
+              </svg>
+              Ver peças no WhatsApp
+            </a>
+            <a class="btn btn--linha" href="#pecas">Ver os modelos</a>
+          </div>
+          <ul class="hero__selos">
+            <li>Selo 925 gravado</li>
+            <li>Pagamento na entrega</li>
+            <li>Troca em 7 dias</li>
+          </ul>
+        </div>
+
+        <!-- ============ [3] FOTOS ============
+           Como colocar as fotos do Instagram:
+           1. Crie uma pasta chamada  fotos  ao lado deste arquivo HTML.
+           2. Baixe as imagens do feed e salve com nomes SEM acento e SEM
+              espaço: capa.jpg, anel-1.jpg, colar-1.jpg...
+           3. Deixe cada foto com no máximo 1200px de largura e salve como
+              .jpg qualidade 80 (use squoosh.app, é grátis) — foto pesada
+              derruba a nota do Google e espanta quem está no 4G.
+           4. O nome no src="" tem que bater exatamente com o do arquivo.
+
+           Enquanto o arquivo não existir, aparece um quadro pontilhado
+           dizendo qual foto está faltando. Isso é proposital.
+
+           O texto do alt="" descreve a foto: serve para quem usa leitor de
+           tela e para o Google entender a imagem. Sempre preencha.       -->
+        <figure class="foto hero__foto" data-arquivo="fotos/capa.jpg" style="margin:0">
+          <img src="fotos/lavie1.png" alt="Modelo usando colar e brincos de prata 925 da La Vie Store" loading="eager"
+            width="800" height="1000">
+        </figure>
+      </div>
+    </section>
+
+    <div class="prova">
+      <div class="env prova__linha">
+        <!-- ALTERE AQUI: use números reais. Número inventado quebra a confiança
+           na hora que alguém perguntar no WhatsApp. -->
+        <span><span class="estrelas" aria-hidden="true">★★★★★</span> <strong>4,9</strong> nas avaliações</span>
+        <span><strong>+800</strong> clientes em Campo Grande</span>
+        <span>Entrega no <strong>mesmo dia</strong> até 15h</span>
+      </div>
+    </div>
+
+    <section id="pecas" class="env">
+      <div class="cabeca">
+        <h2>As peças que mais saem</h2>
+        <p>Todas em prata 925 maciça, com flanela de limpeza no pedido. O estoque completo fica no Instagram.</p>
+      </div>
+
+      <!-- ============ [4] PRODUTOS ============
+         Para adicionar uma peça: copie um bloco <li class="peca"> inteiro,
+         cole abaixo do último e troque 5 coisas:
+           a) data-arquivo e src da foto
+           b) o alt da foto
+           c) o <h3> com o nome
+           d) o <p> com a descrição curta
+           e) o preço e o data-zap do botão
+         Mantenha o nome e o preço iguais dentro do data-zap: é o texto que
+         chega pronto no seu WhatsApp e evita perguntar "qual peça?".      -->
+      <ul class="pecas">
+
+        <li class="peca">
+          <figure class="foto" data-arquivo="fotos/anel-1.jpg" style="margin:0">
+            <img src="fotos/anel-1.jpg" alt="Anel solitário de prata 925 com zircônia" loading="lazy" width="600"
+              height="600">
+          </figure>
+          <div class="peca__corpo">
+            <h3>Anel Solitário</h3>
+            <p>Zircônia lapidada, aro fino. Do 12 ao 22.</p>
+            <div class="peca__preco"><b>R$129</b><s>R$179</s></div>
+            <a class="btn btn--zap" href="#"
+              data-zap="Tenho interesse no Anel Solitário (R$129). Tem no meu tamanho?">Quero esta</a>
+          </div>
+        </li>
+
+        <li class="peca">
+          <figure class="foto" data-arquivo="fotos/colar-1.jpg" style="margin:0">
+            <img src="fotos/colar-1.jpg" alt="Colar de prata 925 com pingente ponto de luz" loading="lazy" width="600"
+              height="600">
+          </figure>
+          <div class="peca__corpo">
+            <h3>Colar Ponto de Luz</h3>
+            <p>Corrente veneziana de 45 cm com extensor.</p>
+            <div class="peca__preco"><b>R$119</b><s>R$159</s></div>
+            <a class="btn btn--zap" href="#"
+              data-zap="Tenho interesse no Colar Ponto de Luz (R$119). Ainda tem disponível?">Quero esta</a>
+          </div>
+        </li>
+
+        <li class="peca">
+          <figure class="foto" data-arquivo="fotos/brinco-1.jpg" style="margin:0">
+            <img src="fotos/brinco-1.jpg" alt="Par de brincos de argola em prata 925" loading="lazy" width="600"
+              height="600">
+          </figure>
+          <div class="peca__corpo">
+            <h3>Argola Clássica</h3>
+            <p>20 mm, leve o bastante para dormir com ela.</p>
+            <div class="peca__preco"><b>R$99</b><s>R$139</s></div>
+            <a class="btn btn--zap" href="#"
+              data-zap="Tenho interesse na Argola Clássica (R$99). Tem pronta entrega?">Quero esta</a>
+          </div>
+        </li>
+
+        <li class="peca">
+          <figure class="foto" data-arquivo="fotos/pulseira-1.jpg" style="margin:0">
+            <img src="fotos/pulseira-1.jpg" alt="Pulseira de prata 925 com berloque de coração" loading="lazy"
+              width="600" height="600">
+          </figure>
+          <div class="peca__corpo">
+            <h3>Pulseira com Berloque</h3>
+            <p>Fecho firme, aceita berloques avulsos.</p>
+            <div class="peca__preco"><b>R$139</b><s>R$189</s></div>
+            <a class="btn btn--zap" href="#"
+              data-zap="Tenho interesse na Pulseira com Berloque (R$139). Quais berloques têm?">Quero esta</a>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="como" class="passos">
+      <div class="env">
+        <div class="cabeca">
+          <h2>Do WhatsApp até a sua mão, no mesmo dia</h2>
+          <p>Atendemos só Campo Grande. É o que permite levar a peça até você e deixar você decidir com ela na mão.</p>
+        </div>
+        <div class="passos__grade">
+          <article class="passo">
+            <h3>Você manda mensagem</h3>
+            <p>Diz o que procura e para quem. Mandamos fotos e vídeos reais das peças que temos agora.</p>
+          </article>
+          <article class="passo">
+            <h3>A gente combina a entrega</h3>
+            <p>Pedidos até as 15h chegam no mesmo dia. Depois disso, no dia seguinte pela manhã.</p>
+          </article>
+          <article class="passo">
+            <h3>Você vê e só então paga</h3>
+            <p>Prova a peça na hora. Se não gostar, não leva. Pix, dinheiro ou cartão na entrega.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="env">
+      <div class="cabeca">
+        <h2>O que dizem por aqui</h2>
+      </div>
+      <!-- ALTERE AQUI: cole prints de conversa reais. Se preferir manter em
+         texto, use nome + bairro: soa local e verificável. -->
+      <ul class="vozes">
+        <li>
+          <figure class="voz">
+            <blockquote>Pedi de manhã e chegou às 16h no meu trabalho. Não acreditei que era prata de verdade por esse
+              preço.</blockquote>
+            <figcaption>Juliana S. — Tiradentes</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="voz">
+            <blockquote>O anel ficou grande e trocaram no dia seguinte sem cobrar nada. Atendimento que a gente não vê
+              mais.</blockquote>
+            <figcaption>Ana Paula M. — Monte Castelo</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="voz">
+            <blockquote>Comprei de presente pra minha mãe, já foi embalado. Ela usa todo dia e não escureceu nada.
+            </blockquote>
+            <figcaption>Diego R. — Vila Albuquerque</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section id="duvidas" class="env">
+      <div class="cabeca">
+        <h2>Dúvidas que chegam todo dia</h2>
+      </div>
+      <div class="faq">
+        <!-- Se editar uma pergunta aqui, edite também no bloco FAQPage lá em
+           cima, senão o Google mostra a versão antiga na busca. -->
+        <details open>
+          <summary>Vocês entregam em qual região?</summary>
+          <p>Em toda Campo Grande. Pedidos fechados até as 15h chegam no mesmo dia, e acima de R$150 a entrega é grátis.
+            Fora da cidade, no momento não atendemos.</p>
+        </details>
+        <details>
+          <summary>A prata 925 escurece?</summary>
+          <p>Sim, e é assim que se reconhece prata de verdade: ela reage ao suor, ao perfume e ao ar. A limpeza leva um
+            minuto com a flanela que vai junto no pedido.</p>
+        </details>
+        <details>
+          <summary>Posso ver a peça antes de pagar?</summary>
+          <p>Pode. Levamos até você, você prova e só paga se gostar. Aceitamos Pix, dinheiro e cartão na hora da
+            entrega.</p>
+        </details>
+        <details>
+          <summary>E se o anel não servir?</summary>
+          <p>Troca em até 7 dias, sem custo. Como estamos na mesma cidade, a gente busca e leva o tamanho certo. Antes
+            do pedido também ajudamos a medir o dedo com um barbante.</p>
+        </details>
+        <details>
+          <summary>Serve para quem tem alergia?</summary>
+          <p>Na maioria dos casos, sim. A liga não leva níquel, que é o metal que causa reação na maior parte das
+            pessoas sensíveis.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="fecho">
+      <div class="env">
+        <h2>Escolha com alguém do lado</h2>
+        <p>Mande uma mensagem dizendo o que procura. Respondemos com fotos reais do que temos hoje e reservamos por 24
+          horas, sem compromisso.</p>
+        <a class="btn btn--zap" href="#" data-zap="Oi! Quero ajuda para escolher uma joia.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.44 1.32-1.99 1.36-.53.04-1.02.23-3.44-.72-2.9-1.14-4.73-4.1-4.87-4.29-.14-.19-1.16-1.54-1.16-2.94s.74-2.09 1-2.38c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.12.57.16.29.73 1.2 1.56 1.95 1.07.95 1.98 1.25 2.26 1.39.28.14.45.12.61-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.18 1.38Z" />
+          </svg>
+          Começar conversa
+        </a>
+        <!-- [6] ALTERE AQUI: seu horário real de atendimento. -->
+        <small>Segunda a sábado, das 9h às 18h · Somente Campo Grande, MS</small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="env rodape__grade">
+      <div>
+        <a class="marca" href="#topo">La<em>&nbsp;Vie</em></a>
+        <p style="margin-top:.7rem;max-width:30ch">Joias em prata 925 legítima. Entrega em Campo Grande, MS.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <strong>Página</strong>
+        <ul>
+          <li><a href="#pecas">Peças</a></li>
+          <li><a href="#como">Como funciona</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <div>
+        <strong>Contato</strong>
+        <ul>
+          <!-- ALTERE AQUI: seu número, no formato que as pessoas leem. -->
+          <li><a href="#" data-zap="Oi! Vim pelo rodapé do site.">WhatsApp (67) 992703754 </a></li>
+          <li><a href="https://www.instagram.com/lavie.storeofc/" target="_blank" rel="noopener">@lavie.storeofc</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="env" style="margin-top:2.2rem;border-top:1px solid var(--linha);padding-top:1rem">
+      <p style="font-size:.82rem;margin:0">© <span id="ano">2026</span> La Vie Store · Campo Grande, MS</p>
+    </div>
+  </footer>
+
+  <a class="btn btn--zap flutua" href="#" data-zap="Oi! Quero falar sobre as joias." aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.44 1.32-1.99 1.36-.53.04-1.02.23-3.44-.72-2.9-1.14-4.73-4.1-4.87-4.29-.14-.19-1.16-1.54-1.16-2.94s.74-2.09 1-2.38c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.12.57.16.29.73 1.2 1.56 1.95 1.07.95 1.98 1.25 2.26 1.39.28.14.45.12.61-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.18 1.38Z" />
+    </svg>
+  </a>
+
+  <div class="barra">
+    <p>Entrega hoje até 15h</p>
+    <a class="btn btn--zap" href="#" data-zap="Oi! Quero ver as peças disponíveis.">Falar agora</a>
+  </div>
+
+  <div class="barra">
+  <p>Entrega hoje até 15h</p>
+  <a class="btn btn--zap" href="#" data-zap="Oi! Quero ver as peças disponíveis.">Falar agora</a>
+</div>
+
+<script src="js/app.js" defer></script>
+
+</body>
+
+</html>

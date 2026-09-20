@@ -1,0 +1,180 @@
+/* =====================================================================
+   [2] PALETA — mude só estas 6 linhas para a página inteira mudar de cor.
+   Pegue as cores do seu Instagram assim: abra um print do feed no
+   site imagecolorpicker.com, clique na cor e copie o código #XXXXXX.
+
+   --marca   = cor principal da loja (detalhes, filetes, destaques)
+   --tinta   = cor dos textos
+   --papel   = fundo da página
+   --cartao  = fundo dos blocos brancos
+   Os botões de WhatsApp ficam verdes de propósito: é a única cor forte
+   da página, então todo elemento colorido é um botão de ação.
+   ===================================================================== */
+:root{
+  --marca:#A9666F;      /* ALTERE AQUI */ 
+  --tinta:#2A2522;      /* ALTERE AQUI */
+  --papel:#F6F4F2;      /* ALTERE AQUI */
+  --cartao:#FFFFFF;     /* ALTERE AQUI */
+  --zap:#0F7A44;        /* verde do botão de WhatsApp */
+  --zap-claro:#128C4A;
+
+  --tinta-suave:#6E6560;
+  --linha:#E2DCD8;
+  --sombra:0 1px 2px rgba(42,37,34,.05), 0 14px 30px -20px rgba(42,37,34,.4);
+  --medida:62ch;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --marca:#D4919A; --tinta:#EFEAE7; --papel:#191614; --cartao:#232020;
+    --tinta-suave:#A79D97; --linha:#332E2B; --zap:#25D366; --zap-claro:#2FE070;
+    --sombra:0 1px 2px rgba(0,0,0,.4), 0 14px 30px -18px rgba(0,0,0,.85);
+  }
+}
+:root[data-theme="dark"]{
+  --marca:#D4919A; --tinta:#EFEAE7; --papel:#191614; --cartao:#232020;
+  --tinta-suave:#A79D97; --linha:#332E2B; --zap:#25D366; --zap-claro:#2FE070;
+}
+
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(68px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--papel);color:var(--tinta);
+  font-family:Karla,"Segoe UI",system-ui,-apple-system,sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.06rem);line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--zap-claro);outline-offset:3px}
+h1,h2,h3{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.16;margin:0}
+h1{font-size:clamp(2.2rem,1.5rem + 3.6vw,3.8rem)}
+h2{font-size:clamp(1.7rem,1.3rem + 2vw,2.5rem)}
+h3{font-size:clamp(1.1rem,1.02rem + .4vw,1.3rem)}
+p{margin:0 0 1rem;max-width:var(--medida)}
+.env{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:inherit;font-size:1rem;font-weight:700;line-height:1;
+  padding:1.05rem 1.6rem;border:1px solid transparent;border-radius:3px;
+  text-decoration:none;cursor:pointer;transition:background-color .18s,transform .15s,border-color .18s}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn--zap{background:var(--zap);color:#fff;box-shadow:var(--sombra)}
+.btn--zap:hover{background:var(--zap-claro)}
+.btn--zap:active{transform:translateY(1px)}
+.btn--linha{background:transparent;color:var(--tinta);border-color:var(--linha)}
+.btn--linha:hover{border-color:var(--marca)}
+
+/* topo */
+.aviso{background:var(--tinta);color:var(--papel);text-align:center;font-size:.85rem;padding:.6rem 1rem}
+.aviso b{font-weight:700}
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
+  background:color-mix(in srgb,var(--papel) 90%,transparent);backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .2s}
+.topo[data-fixo="1"]{border-bottom-color:var(--linha)}
+.topo__linha{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+.marca{font-family:Prata,serif;font-size:1.4rem;letter-spacing:.06em;text-decoration:none;color:var(--tinta)}
+.marca em{font-style:normal;color:var(--marca)}
+.nav{display:none;gap:1.8rem}
+.nav a{text-decoration:none;font-size:.94rem;color:var(--tinta-suave)}
+.nav a:hover{color:var(--tinta)}
+.topo .btn{padding:.78rem 1.1rem;font-size:.9rem;display:none}
+@media (min-width:900px){.nav{display:flex}.topo .btn{display:inline-flex}}
+
+/* hero */
+.hero{padding-top:clamp(2rem,5vw,3.5rem)}
+.hero__grade{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+@media (min-width:900px){.hero__grade{grid-template-columns:1fr 1fr}}
+.local{display:inline-flex;align-items:center;gap:.45rem;font-size:.92rem;color:var(--marca);font-weight:700;margin-bottom:1.1rem}
+.local svg{width:1.05em;height:1.05em}
+.hero .lead{font-size:clamp(1.02rem,1rem + .3vw,1.18rem);color:var(--tinta-suave);max-width:44ch;margin-top:1.2rem}
+.hero__acoes{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.hero__selos{display:flex;flex-wrap:wrap;gap:.3rem 1.6rem;list-style:none;padding:1.4rem 0 0;margin:1.8rem 0 0;
+  border-top:1px solid var(--linha);font-size:.9rem;color:var(--tinta-suave)}
+
+/* ---- [3] FOTOS: molduras ---- */
+.foto{position:relative;overflow:hidden;background:var(--cartao);border:1px solid var(--linha);border-radius:3px}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto--vazia{display:grid;place-items:center;border:1px dashed var(--marca);background:color-mix(in srgb,var(--marca) 7%,var(--cartao));padding:1rem}
+.foto--vazia::after{content:attr(data-arquivo);font-size:.78rem;line-height:1.5;color:var(--marca);text-align:center;word-break:break-all}
+.hero__foto{aspect-ratio:4/5;max-width:460px;margin-inline:auto;width:100%}
+
+/* prova */
+.prova{background:var(--cartao);border-block:1px solid var(--linha);padding-block:1.2rem}
+.prova__linha{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem 2.2rem;font-size:.9rem;color:var(--tinta-suave);text-align:center}
+.prova strong{color:var(--tinta)}
+.estrelas{color:var(--marca);letter-spacing:.1em}
+
+.cabeca{max-width:52ch;margin-bottom:clamp(1.8rem,4vw,2.8rem)}
+.cabeca p{color:var(--tinta-suave);margin-top:.8rem}
+
+/* [4] produtos */
+.pecas{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));list-style:none;padding:0;margin:0}
+.peca{background:var(--cartao);border:1px solid var(--linha);border-radius:3px;display:flex;flex-direction:column;overflow:hidden}
+.peca .foto{aspect-ratio:1/1;border:0;border-bottom:1px solid var(--linha);border-radius:0}
+.peca__corpo{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.peca h3{margin-bottom:.4rem}
+.peca p{font-size:.93rem;color:var(--tinta-suave);margin-bottom:1rem}
+.peca__preco{display:flex;align-items:baseline;gap:.5rem;margin-top:auto;margin-bottom:.9rem}
+.peca__preco b{font-family:Prata,serif;font-size:1.45rem;font-weight:400}
+.peca__preco s{color:var(--tinta-suave);font-size:.88rem}
+.peca .btn{width:100%;padding:.9rem 1rem;font-size:.95rem}
+
+/* passos */
+.passos{background:var(--cartao);border-block:1px solid var(--linha)}
+.passos__grade{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));margin-top:clamp(1.8rem,4vw,2.6rem);counter-reset:p}
+.passo{counter-increment:p;padding-top:1.1rem;border-top:2px solid var(--marca)}
+.passo h3::before{content:counter(p) ". ";color:var(--marca)}
+.passo p{font-size:.94rem;color:var(--tinta-suave);margin:.4rem 0 0}
+
+/* depoimentos */
+.vozes{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));list-style:none;padding:0;margin:0}
+.voz{background:var(--cartao);border:1px solid var(--linha);border-radius:3px;padding:1.5rem;margin:0}
+.voz blockquote{margin:0 0 .9rem;font-size:1rem}
+.voz figcaption{font-size:.86rem;color:var(--tinta-suave)}
+
+/* faq */
+.faq{max-width:740px}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 2.5rem 1.15rem 0;position:relative;font-weight:700;font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.4rem;top:.95rem;font-size:1.5rem;font-weight:400;color:var(--marca);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 1.3rem;color:var(--tinta-suave);font-size:.96rem;margin:0}
+
+/* fecho */
+.fecho{background:var(--tinta);color:var(--papel);text-align:center}
+.fecho h2{color:var(--papel)}
+.fecho p{color:color-mix(in srgb,var(--papel) 74%,transparent);margin-inline:auto;margin-top:.9rem}
+.fecho .btn{margin-top:1.8rem}
+.fecho small{display:block;margin-top:1.3rem;font-size:.85rem;color:color-mix(in srgb,var(--papel) 60%,transparent)}
+
+/* rodapé */
+.rodape{padding-block:2.8rem 7rem;font-size:.9rem;color:var(--tinta-suave)}
+.rodape__grade{display:flex;flex-wrap:wrap;gap:1.4rem 3rem;justify-content:space-between}
+.rodape ul{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.35rem}
+.rodape a{text-decoration:none}
+.rodape a:hover{text-decoration:underline}
+.rodape strong{color:var(--tinta)}
+@media (min-width:760px){.rodape{padding-bottom:2.8rem}}
+
+/* ações fixas */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--cartao);
+  border-top:1px solid var(--linha);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));
+  display:flex;gap:1rem;align-items:center;justify-content:space-between}
+.barra p{margin:0;font-size:.8rem;line-height:1.3;color:var(--tinta-suave);max-width:15ch}
+.barra .btn{padding:.85rem 1.2rem;font-size:.95rem;flex:1;max-width:58%}
+.flutua{display:none}
+@media (min-width:760px){
+  .barra{display:none}
+  .flutua{display:inline-flex;position:fixed;right:1.5rem;bottom:1.5rem;z-index:50;
+    width:58px;height:58px;border-radius:50%;padding:0;box-shadow:0 10px 30px -8px rgba(15,122,68,.55)}
+  .flutua svg{width:29px;height:29px}
+
+}
